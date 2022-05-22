@@ -1,0 +1,46 @@
+﻿@model InAndOut.Models.Item
+
+<form method="post" asp-action="Create">
+    <div class="border p-3">
+        <div class="form-group row">
+            <h2 class="text-black-50 pl-3">Add Item</h2>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label asp-for="ItemName"></label> <!-- ITEMNAME from Models Item properti name-->
+                    </div>
+                    <div class="col-4">
+                        <label asp-for="Borrower"></label> <!-- BORROWER from Models Item properti name-->
+                    </div>
+                    <div class="col-4">
+                        <label asp-for="Lender"></label> <!-- LENDER from Models Item properti name-->
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-4">
+                        <input asp-for="ItemName" class="form-control" /> <!--TEXTBOX HERE-->
+                    </div>
+                    <div class="col-4">
+                        <input asp-for="Borrower" class="form-control" /> <!--TEXTBOX HERE-->
+                    </div>
+                    <div class="col-4">
+                        <input asp-for="Lender" class="form-control" /> <!--TEXTBOX HERE-->
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-8 offset-2 row">
+                        <div class="col">
+                            <input type="submit" class="btn btn-info w-75" value="create" /> <!--CREATE BUTTON-->
+                        </div>
+                        <div class="col">
+                            <a asp-action="Index" class="btn btn-danger w-75">Back</a> <!--GO BACK BUTTON-->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>
